@@ -1,0 +1,19 @@
+{
+  "name": "fastify_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@hapi/hoek": "^11.0.7",
+    "fastify": "^5.2.1",
+    "mongoose": "^8.9.6"
+  }
+}
