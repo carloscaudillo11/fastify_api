@@ -49,7 +49,7 @@ const updateProduct = async (request, reply) => {
 
     if (!title || !price || !quantity) {
       throw Boom.badRequest("Title, price, and quantity are required.");
-    }    
+    }
     const product = { title, image, description, price, quantity };
     const productdb = await productModel.findByIdAndUpdate(id, product, {
       new: true,
@@ -72,6 +72,12 @@ const deleteProduct = async (request, reply) => {
   } catch (err) {
     return reply.send(err.isBoom ? err : Boom.badRequest(err.message));
   }
-};  
+};
 
-export { getProducts, createProduct, getProductById, updateProduct, deleteProduct };
+export {
+  getProducts,
+  createProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+};
